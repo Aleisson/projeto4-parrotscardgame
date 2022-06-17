@@ -22,11 +22,34 @@ h1 {
     line-height: 66px;
     letter-spacing: -0.004em;
     color: #75B79E;
+    margin-bottom: 32px;
 }
 
 
 .content {
-    width: 80%;
-    height: 90vw;
-    background-color: blue;
+    width: 926px;
+    height: 28vw;
+    /* background-color: blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+.card {
+    width: 117px;
+    height: 146px;
+    background: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    
+   
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    margin-top: 16px;
 }
