@@ -29,7 +29,7 @@ h1 {
 .content {
     width: 926px;
     height: 28vw;
-    /* background-color: blue; */
+    background-color: blue;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -44,12 +44,28 @@ h1 {
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    
-   
+
+
 }
 
 .card img {
     width: 100px;
     height: 100px;
     margin-top: 16px;
+}
+
+@media (max-width: 614px) {
+    .content {
+        width: 30%;
+        height: auto;
+    }
+
+    .card {
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
 }
