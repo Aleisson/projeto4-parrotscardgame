@@ -29,7 +29,7 @@ h1 {
 .content {
     width: 926px;
     height: 28vw;
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
