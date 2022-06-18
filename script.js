@@ -34,24 +34,23 @@ function addcard(num) {
 		for (let index = 0; index < 2; index++) {
 
 			arrayCards.push(`   <div>
-			<div class="card">
-				<div class="front-face face">
-					<img src="img/front.png" alt="papagaio">
-				</div>
-				<div class="back-face face">
-					<img src="img/${img[cont]}" alt="">
-				</div>
+									<div class="card">
+										<div class="front-face face">
+											<img src="img/front.png" alt="papagaio">
+										</div>
+										<div class="back-face face">
+											<img src="img/${img[cont]}" alt="">
+										</div>
 			
-			</div>
-			</div>`)
+									</div>
+								</div>`)
 
 		}
 		cont--;
 	}
 
+	arrayCards = arrayCards.sort(comparador);	
 	arrayCards.forEach( x => divContent.innerHTML += x);
-
-
 	
 }
 
