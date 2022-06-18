@@ -1,12 +1,17 @@
 const img = ["bobrossparrot.gif", "explodyparrot.gif", "fiestaparrot.gif", "metalparrot.gif", "revertitparrot.gif", "tripletsparrot.gif", "unicornparrot.gif"]
 
-let numCartas = Number(prompt("Quantas cartas quer jogar? Numero entre (4 a 14, sendo par)"));
+let numCartas = Number(prompt("Quantas cartas quer jogar? Numeros entre 4 e 14, sendo eles par)"));
+let contFlip = 0;
 
 
 function comparador() {
 	return Math.random() - 0.5;
 }
 
+
+function addcont() {
+	contFlip++;
+}
 
 function entradacartas() {
 	let cond = 1;
@@ -15,10 +20,11 @@ function entradacartas() {
 
 		if (!(numCartas % 2) && numCartas >= 4 && numCartas <= 14) {
 			cond = 0;
+			numCartas = numCartas / 2;
 			addcard(numCartas);
 		} else {
 
-			numCartas = Number(prompt("Quantas cartas quer jogar? Numero entre (4 a 14, sendo par)"));
+			numCartas = Number(prompt("Quantas cartas quer jogar? Numeros entre 4 e 14, sendo eles par)"));
 
 		}
 	}
@@ -26,7 +32,7 @@ function entradacartas() {
 
 function addcard(num) {
 
-	let cont = num / 2;
+	let cont = num;
 	let arrayCards = [];
 	let divContent = document.querySelector(".content");
 	let i = 0;
@@ -58,7 +64,7 @@ function addcard(num) {
 function flipselect(card) {
 
 	let divSelect = document.querySelectorAll(".select");
-
+	addcont()
 
 
 	if (!(card.classList.contains("select"))) {
@@ -72,20 +78,28 @@ function flipselect(card) {
 		if (divSelect.length == 2) {
 
 			setTimeout(flipbegin, 500);
-		
+
 		}
 
 	}
 }
 
 function flipbegin() {
-	
-	let select =  document.querySelectorAll(".select");
+
+	let select = document.querySelectorAll(".select");
 	if (select[0].querySelector('.back-face img').src === select[1].querySelector('.back-face img').src) {
+
+		numCartas--;
+		if (!numCartas) {
+			alert(`Você ganhou em ${contFlip} jogadas!`)
+		}
+
+		
 		for (let index = 0; index < select.length; index++) {
 
 			select[index].classList.remove("select");
-			
+
+
 		}
 	} else {
 
