@@ -25,6 +25,33 @@ h1 {
     margin-bottom: 32px;
 }
 
+.box-timer {
+    width: 100px;
+    height: 100px;
+    background-color: #ffff00;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    text-align: center;
+}
+
+.timer{
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    color: #1b1a1a;
+    font-size: 49px;
+}
+
+.seg{
+    position: absolute;
+    top:18px;
+    right: 13px;
+    color: #1b1a1a;
+    font-size: 16px;
+}
 
 .content {
     width: 926px;
@@ -34,7 +61,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-around;
-    
+
 }
 
 
@@ -51,7 +78,7 @@ h1 {
     height: 100%;
     background-color: #A7E9AF;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,11 +86,11 @@ h1 {
     backface-visibility: hidden;
     transition: all .5s;
     transform-style: preserve-3d;
-  }
+}
 
-  .back-face {
+.back-face {
     transform: rotateY(180deg);
-  }
+}
 
 
 .card img {
@@ -71,11 +98,11 @@ h1 {
     height: 100px;
 }
 
-.front-card{
+.front-card {
     display: none;
 }
 
-.back-card{
+.back-card {
     display: initial;
 }
 

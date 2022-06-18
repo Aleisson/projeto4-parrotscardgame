@@ -1,8 +1,8 @@
 const img = ["bobrossparrot.gif", "explodyparrot.gif", "fiestaparrot.gif", "metalparrot.gif", "revertitparrot.gif", "tripletsparrot.gif", "unicornparrot.gif"]
-
+let seg = 0;
 let numCartas = Number(prompt("Quantas cartas quer jogar? Numeros entre 4 e 14, sendo eles par)"));
 let contFlip = 0;
-
+let idInterval;
 
 function comparador() {
 	return Math.random() - 0.5;
@@ -11,6 +11,18 @@ function comparador() {
 
 function addcont() {
 	contFlip++;
+}
+
+function begintimer(){
+	seg++;
+	document.querySelector(".timer").innerHTML = seg;
+	console.log(seg);
+}
+
+idInterval = setInterval(begintimer,1000);
+
+function stopTimer(id){
+	clearInterval(id);
 }
 
 function entradacartas() {
@@ -91,7 +103,8 @@ function flipbegin() {
 
 		numCartas--;
 		if (!numCartas) {
-			alert(`Você ganhou em ${contFlip} jogadas!`)
+			alert(`Você ganhou em ${contFlip} jogadas!`);
+			stopTimer(idInterval);
 		}
 
 		
