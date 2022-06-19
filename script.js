@@ -16,7 +16,7 @@ function addcont() {
 function begintimer(){
 	seg++;
 	document.querySelector(".timer").innerHTML = seg;
-	console.log(seg);
+
 }
 
 idInterval = setInterval(begintimer,1000);
@@ -102,9 +102,31 @@ function flipbegin() {
 	if (select[0].querySelector('.back-face img').src === select[1].querySelector('.back-face img').src) {
 
 		numCartas--;
+		console.log("numcartas = " + numCartas)
 		if (!numCartas) {
+
 			alert(`Você ganhou em ${contFlip} jogadas!`);
 			stopTimer(idInterval);
+
+			let repete = prompt("Gostária de repetir? responda com 'sim' ou 'não' não esqueça o acento")
+			console.log(repete);
+			console.log(typeof(repete));
+		
+			while (!(repete === "não" || repete === "sim")) {
+				repete = prompt("Gostária de repetir? responda com 'sim' ou 'não' não esqueça o acento")
+			}
+
+			if (repete === "sim") {
+				document.querySelector(".timer").innerHTML = "";
+				document.querySelector(".content").innerHTML ="";
+				seg = 0;
+				contFlip = 0;
+				idInterval = setInterval(begintimer,1000);
+				entradacartas();
+			} else{
+				location.assign("https://www.driven.com.br/");
+			}
+		
 		}
 
 		
