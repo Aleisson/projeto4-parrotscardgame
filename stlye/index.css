@@ -112,6 +112,21 @@ h1 {
         height: auto;
     }
 
+    .seg{
+        display: none;
+    }
+
+    .box-timer{
+        width: 100px;
+        height: 36px;
+        top: 7px;
+    }
+
+    .timer{
+        top: 2px;
+        right: 10px;
+        font-size: 32px;
+    }
     .card {
         margin-bottom: 25px;
     }
