@@ -102,15 +102,14 @@ function flipbegin() {
 	if (select[0].querySelector('.back-face img').src === select[1].querySelector('.back-face img').src) {
 
 		numCartas--;
-		console.log("numcartas = " + numCartas)
+		
 		if (!numCartas) {
 
 			alert(`Você ganhou em ${contFlip} jogadas! Após ${seg} segundos`);
 			stopTimer(idInterval);
 
 			let repete = prompt("Gostária de repetir? responda com 'sim' ou 'não' não esqueça o acento")
-			console.log(repete);
-			console.log(typeof(repete));
+	
 		
 			while (!(repete === "não" || repete === "sim")) {
 				repete = prompt("Gostária de repetir? responda com 'sim' ou 'não' não esqueça o acento")
@@ -124,7 +123,7 @@ function flipbegin() {
 				idInterval = setInterval(begintimer,1000);
 				entradacartas();
 			} else{
-				location.assign("https://www.driven.com.br/");
+				location.assign("https://github.com/Aleisson/projeto4-parrotscardgame");
 			}
 		
 		}
@@ -155,8 +154,3 @@ entradacartas();
 
 
 
-//setTimeout()
-
-// card.querySelector(".front-face").style.transform = 'rotateY(-180deg)';
-// card.querySelector(".back-face").style.transform = 'rotateY(0deg)';
-// teste[0].querySelector('img').src.split('img/')[1]
