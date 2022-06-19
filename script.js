@@ -105,7 +105,7 @@ function flipbegin() {
 		console.log("numcartas = " + numCartas)
 		if (!numCartas) {
 
-			alert(`Você ganhou em ${contFlip} jogadas!`);
+			alert(`Você ganhou em ${contFlip} jogadas! Após ${seg} segundos`);
 			stopTimer(idInterval);
 
 			let repete = prompt("Gostária de repetir? responda com 'sim' ou 'não' não esqueça o acento")
